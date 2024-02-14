@@ -29,8 +29,8 @@
       <br>
       <br>
       <footer>
-        <audio controls loop autoplay id="audio-player">
-            <source src="music.mp3" type="audio/mp3">
+        <audio controls loop id="audio-player" preload="auto">
+          <source src="music.mp3" type="audio/mp3">
             Tu navegador no soporta la etiqueta de audio.
         </audio>
       </footer>
@@ -38,5 +38,18 @@
   </div>
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var audioPlayer = document.getElementById('audio-player');
+        var clickMe = document.querySelector('.title');
+    
+        clickMe.addEventListener('click', function() {
+            audioPlayer.play();
+        });
+    });
+    </script>
+    
 </body>
+
+  
 </html>
